@@ -1,0 +1,340 @@
+@import '../../config.scss';
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+.jobsCardsContainer{
+    min-height: 100vh;
+    padding: 5rem 0;
+    position: relative;
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        position: relative;
+        top: 75px;
+        color: #fff;
+        font-size: 1.7rem;
+        z-index: 3;
+    }
+    .jobsCards{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        gap: 5rem;
+        padding: 5rem 1rem;
+        transition: 1s ease-in-out;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        max-width: 1140px;
+        width: 90%;
+        background: $primaryColor;
+        margin: auto;
+        border-radius: 24px;
+        position: relative;
+        transition: 1s;
+        h3{
+            position: absolute;
+            top: 50px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+        .circles{
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        .circle{
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.1);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-radius: 50%;
+        }
+        .circle2{
+            width: 800px;
+            height: 800px;
+            background: rgba(255,255,255,0.3);
+            position: absolute;
+            top: -300px;
+            border-radius: 50%;
+            overflow: hidden;
+            right: -500px;
+        }
+        
+        .jobCard{
+            max-width: 400px;
+            min-width: 340px;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            border-radius: 24px;
+            cursor: pointer;
+            position: relative;
+            transition: 1s;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.2) ;
+                 
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            button{
+                z-index: 5;
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50%;
+                height: 50px;
+                border-radius: 30px;
+                background: $primaryColor;
+                font-size: 1.2rem;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+        
+    }
+}
+.themeBlue{
+    .jobsCards{
+        background: #008080;
+    .jobCard button{
+        background: #008080;
+    }
+    }
+}
+.dots{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transition: .4s;
+    span{
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        // background: #fff;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        &.active{
+            background: #fff;
+        }
+    }
+}
+.New_Job_Cards{
+    padding: 5rem 0;
+    h1{
+        text-align: center;
+        margin-bottom: 2rem ;
+    }
+    .New_Job_Cards_Container{
+        width: 80%;
+        margin: auto;
+        max-width: 1140px;
+        display: flex;
+        justify-content: center;
+         column-gap: .5%;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+     &>a{
+         width: 33%;
+     }
+        .New_Job_Card{
+            width: 100%;
+            display: flex;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow:0 4px 16px rgba(0,0,0,.1);
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            transition: .4s;
+            max-width: 350px;
+            &:hover{
+                transform: scale(1.1);
+            }
+            button,i{
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+                cursor: pointer;
+                background:#172134;
+                color: #fff;
+                height: 40px;
+                
+                border-radius: 24px;
+                
+                
+            }
+            button{
+                overflow: hidden;
+                padding-right: 1.5rem;
+                width: 0;
+                opacity: 0;
+                pointer-events: none;
+                transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            i{
+                z-index: 3;
+                border: 50%;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                transition: .5s;
+                z-index: 32;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 100%;
+                    opacity: 0;
+
+                }
+                &:hover::after{
+                    width: 180px;
+                }
+                &:hover + button{
+                 width: 180px;
+                 opacity: 1;
+                 pointer-events: initial;
+                 
+                }
+            }
+       
+        }
+    }
+}
+@media(max-width:768px){
+    
+ .New_Job_Cards .New_Job_Cards_Container > a{
+     width: 100%;
+ }
+    .New_Job_Cards
+    
+    .New_Job_Cards_Container {
+      
+        .New_Job_Card{
+width: 100%;
+button{
+    position: static;
+    margin-top: 1rem;
+    opacity: 1;
+    width: 180px;
+    pointer-events: initial;
+    padding: 0;
+
+}
+i{
+    display: none;
+}
+    }}
+}
+.Job_Responsibility img{
+    width: 100%;
+    object-fit: cover;
+    background-color: #172134;
+    max-height: 500px;
+  }
+  .Job_Responsibility h1{
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+  }
+.Responsibilities{
+    width: 80%;
+    max-width: 1140px;
+    margin: auto;
+    margin-bottom: 12rem;
+    h4{
+        margin-bottom: 1rem;
+    }
+    ol{
+        
+  counter-reset: my-awesome-counter;
+
+  list-style: none;
+        li{
+            margin-bottom: 1rem;
+            min-height: 40px;
+            counter-increment: my-awesome-counter;
+            border-bottom: 1px solid #ededed;
+            &::before{
+            content:  counter(my-awesome-counter);
+           font-family: 'Abril Fatface', serif;
+            font-size: 1.5rem;
+            color: #172134;
+           margin-right: .5rem;
+  }
+        }
+    }
+    button{
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1rem;
+        background: $primaryColor;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        font-weight: bold;
+        a{
+            position: absolute;
+            width: 100%;
+               height: 100%;
+               top: 0;
+               left: 0;
+        }
+    }
+}
+@media(max-width:786px){
+    .Responsibilities {
+        ol li{
+            font-size: .8rem;
+            min-height: 30px;
+            &::before{
+                font-size: 1rem;
+            }
+        }
+        button{
+            width: 80%;
+        }
+        
+    }
+}
+.upload_label{
+    float: right;
+    
+}
+.upload_input{
+    display: none;
+}

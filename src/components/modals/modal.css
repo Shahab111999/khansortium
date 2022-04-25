@@ -1,0 +1,160 @@
+.modalContainer {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: .5s;
+    transition: .5s;
+    z-index: 55;
+  }
+  
+  .modalContainer.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  
+  .modalContainer .modal {
+    width: 97%;
+    max-width: 866px;
+    background-color: #E9EDF7;
+    padding: 2rem;
+    border-radius: 5px;
+  }
+  
+  .modalContainer .modal h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .ModalAddressess{
+      max-height: 50vh;
+      overflow: auto;
+  }
+  .modalContainer .modal .ModalAddressess {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  
+  .modalContainer .modal .ModalRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .modalContainer .modal .ModalRow > div:nth-child(1), .modalContainer .modal .ModalRow > div:nth-child(2) {
+    width: 29.5%;
+  }
+  
+  .modalContainer .modal .ModalRow > div:nth-child(3) {
+    width: 40%;
+  }
+  
+  .modalContainer button {
+    height: 40px;
+    width: 200px;
+    margin: 2rem auto 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    z-index: 5;
+    display: block;
+    background-color: #222;
+    color: #fff;
+  }
+
+ 
+  
+  
+  .modalContainer button:hover {
+    background-color: #aaa;
+    color: #fff;
+  }
+  
+  .modalContainer .item{
+    display: flex!important;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 1.2rem;
+    
+  }
+  .owl-nav{
+    margin-top: 2rem!important;
+  }
+  .owl-nav button{
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 50%!important;
+    border: 1px solid !important;
+    font-size: 2rem!important;
+    
+  }
+  .owl-nav button span{
+    position: relative!important;
+    top: -4px!important;
+  } 
+  .slick-list{
+    padding-bottom: 3.5rem;
+  }
+  .slick-arrow{
+    width: 40px!important;
+    height: 40px!important;
+    top: 70%!important;  
+    background-color: transparent!important;
+  }
+  .slick-arrow:hover{
+    background-color: transparent!important;
+  }
+  .slick-arrow::before{
+    font-size: 40px;
+    color: #222;
+  }
+  .slick-prev{
+    left: 47%!important;
+    transform: translateX(-50%)!important;
+  }
+  .slick-next{
+    right: 47%!important;
+    
+    transform: translateX(50%)!important;
+  }
+  @media (max-width: 768px) {
+    .slick-prev{
+      left: 42%!important;
+      transform: translateX(-50%)!important;
+    }
+    .slick-next{
+      right: 42%!important;
+      
+      transform: translateX(50%)!important;
+    }
+    .modalContainer
+  .modal {
+      padding: 2rem 1rem;
+    }
+  }
+  @media (max-width:960px) {
+      .modalContainer .modal{
+          max-width: 650px;
+      }
+  }
+  @media (max-width:768px) {
+      .modalContainer .modal{
+          max-width: 350px;
+      }
+  }
+  /*# sourceMappingURL=modal.css.map */

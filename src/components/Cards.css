@@ -1,0 +1,168 @@
+.CARDS .CARDS_CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1140px;
+  width: 80%;
+  margin: auto;
+  padding: 5rem 0;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.CARDS .CARDS_CONTAINER h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.CARDS .CARDS_CONTAINER .filters {
+  width: 100%;
+}
+
+.CARDS .CARDS_CONTAINER .filters ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.CARDS .CARDS_CONTAINER .filters ul li {
+  padding: .5rem 2rem;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.CARDS .CARDS_CONTAINER .filters ul li.active {
+  background: #008080;
+  color: #fff;
+  border-radius: 24px;
+}
+
+.CARDS .CARDS_CONTAINER .CARD {
+  overflow: hidden;
+  width: 30%;
+  border: 1px solid #ddd;
+  min-width: 250px;
+  display: none;
+}
+
+.CARDS .CARDS_CONTAINER .CARD.active {
+  display: block;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_IMAGE img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_CONTENT {
+  margin: 1rem;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_CONTENT h3 {
+  color: #a7a428;
+  text-align: center;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_CONTENT p {
+  margin: 1rem 0;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_CONTENT button {
+  width: 100%;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_CONTENT button a {
+  padding: 1rem 2rem;
+  background-color: #a7a428;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-transform: uppercase;
+}
+
+.CARDS .CARDS_CONTAINER .CARD .CARD_CONTENT button a:hover {
+  background: #008080;
+}
+
+.CARDS .CARDS_CONTAINER .filters > span {
+  display: none;
+}
+
+.herald_logo {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .CARDS .CARDS_CONTAINER .filters > span {
+    text-align: center;
+    display: block;
+    margin: auto;
+    line-height: 40px;
+    border: 1px solid #008080;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+  }
+  .CARDS .CARDS_CONTAINER .filters > span i {
+    margin-left: 5px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .CARDS .CARDS_CONTAINER .filters ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .CARDS .CARDS_CONTAINER .filters ul li {
+    line-height: 40px;
+    border-bottom: 1px solid #008080;
+  }
+  .CARDS .CARDS_CONTAINER .filters ul li.active {
+    border-radius: 0;
+  }
+  .CARDS .CARDS_CONTAINER .filters.active ul {
+    height: 285px;
+  }
+  .CARDS .CARDS_CONTAINER .CARD {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=Cards.css.map */

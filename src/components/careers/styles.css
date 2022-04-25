@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+.jobsCardsContainer {
+  min-height: 100vh;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.jobsCardsContainer h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  position: relative;
+  top: 75px;
+  color: #fff;
+  font-size: 1.7rem;
+  z-index: 3;
+}
+
+.jobsCardsContainer .jobsCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  gap: 5rem;
+  padding: 5rem 1rem;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  max-width: 1140px;
+  width: 90%;
+  background: #a7a428;
+  margin: auto;
+  border-radius: 24px;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.jobsCardsContainer .jobsCards::-webkit-scrollbar {
+  display: none;
+}
+
+.jobsCardsContainer .jobsCards h3 {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.jobsCardsContainer .jobsCards .circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.jobsCardsContainer .jobsCards .circle {
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 50%;
+}
+
+.jobsCardsContainer .jobsCards .circle2 {
+  width: 800px;
+  height: 800px;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -300px;
+  border-radius: 50%;
+  overflow: hidden;
+  right: -500px;
+}
+
+.jobsCardsContainer .jobsCards .jobCard {
+  max-width: 400px;
+  min-width: 340px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.jobsCardsContainer .jobsCards .jobCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.jobsCardsContainer .jobsCards .jobCard img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.jobsCardsContainer .jobsCards .jobCard button {
+  z-index: 5;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  height: 50px;
+  border-radius: 30px;
+  background: #a7a428;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.themeBlue .jobsCards {
+  background: #008080;
+}
+
+.themeBlue .jobsCards .jobCard button {
+  background: #008080;
+}
+
+.dots {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.dots span {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.dots span.active {
+  background: #fff;
+}
+
+.New_Job_Cards {
+  padding: 5rem 0;
+}
+
+.New_Job_Cards h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.New_Job_Cards .New_Job_Cards_Container {
+  width: 80%;
+  margin: auto;
+  max-width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: .5%;
+          column-gap: .5%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 2rem;
+}
+
+.New_Job_Cards .New_Job_Cards_Container > a {
+  width: 33%;
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: .4s;
+  transition: .4s;
+  max-width: 350px;
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card button, .New_Job_Cards .New_Job_Cards_Container .New_Job_Card i {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+  background: #172134;
+  color: #fff;
+  height: 40px;
+  border-radius: 24px;
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card button {
+  overflow: hidden;
+  padding-right: 1.5rem;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card i {
+  z-index: 3;
+  border: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 32;
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card i::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  opacity: 0;
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card i:hover::after {
+  width: 180px;
+}
+
+.New_Job_Cards .New_Job_Cards_Container .New_Job_Card i:hover + button {
+  width: 180px;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+@media (max-width: 768px) {
+  .New_Job_Cards .New_Job_Cards_Container > a {
+    width: 100%;
+  }
+  .New_Job_Cards
+.New_Job_Cards_Container .New_Job_Card {
+    width: 100%;
+  }
+  .New_Job_Cards
+.New_Job_Cards_Container .New_Job_Card button {
+    position: static;
+    margin-top: 1rem;
+    opacity: 1;
+    width: 180px;
+    pointer-events: initial;
+    padding: 0;
+  }
+  .New_Job_Cards
+.New_Job_Cards_Container .New_Job_Card i {
+    display: none;
+  }
+}
+
+.Job_Responsibility img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #172134;
+  max-height: 500px;
+}
+
+.Job_Responsibility h1 {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.Responsibilities {
+  width: 80%;
+  max-width: 1140px;
+  margin: auto;
+  margin-bottom: 12rem;
+}
+
+.Responsibilities h4 {
+  margin-bottom: 1rem;
+}
+
+.Responsibilities ol {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+}
+
+.Responsibilities ol li {
+  margin-bottom: 1rem;
+  min-height: 40px;
+  counter-increment: my-awesome-counter;
+  border-bottom: 1px solid #ededed;
+}
+
+.Responsibilities ol li::before {
+  content: counter(my-awesome-counter);
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.5rem;
+  color: #172134;
+  margin-right: .5rem;
+}
+
+.Responsibilities button {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 1rem;
+  background: #a7a428;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+}
+
+.Responsibilities button a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 786px) {
+  .Responsibilities ol li {
+    font-size: .8rem;
+    min-height: 30px;
+  }
+  .Responsibilities ol li::before {
+    font-size: 1rem;
+  }
+  .Responsibilities button {
+    width: 80%;
+  }
+}
+
+.upload_label {
+  float: right;
+}
+
+.upload_input {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

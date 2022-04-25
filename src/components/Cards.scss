@@ -1,0 +1,144 @@
+@import '../config.scss';
+.CARDS{
+
+    .CARDS_CONTAINER{
+        display: flex;
+        max-width: 1140px;
+        width: 80%;
+        margin: auto;
+        padding: 5rem 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2rem;
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        .filters{
+            width: 100%;
+            ul{display: flex;
+            justify-content: center;
+             li{
+                 padding: .5rem 2rem;
+                 transition: .2s ease-out;
+                 cursor: pointer;
+                 display: flex;
+                 align-items: center;
+                 text-align: center;
+                 &.active{
+                     background: #008080;
+                     color: #fff;
+                     border-radius: 24px;
+                 }
+             }
+        }
+        }
+        .CARD{
+            overflow: hidden;
+            width: 30%;
+            // padding: 1rem;
+            border: 1px solid #ddd;
+            min-width: 250px;
+            display: none;
+            &.active{
+                display: block;
+            }
+            .CARD_IMAGE{
+                // img{
+                //     width: 100%;
+                //     object-fit: cover;
+                //     height: 250px;
+                // }
+            }
+            .CARD_CONTENT{
+                margin: 1rem ;
+                h3{
+                    color: $primaryColor;
+                    text-align: center;
+                }
+                p{
+                    margin: 1rem 0;
+                }
+                button{
+                    width: 100%;
+                    a{
+                        padding:1rem 2rem;
+                        background-color: $primaryColor;
+                        color: #fff;
+                        font-weight: bold;
+                        display: block;
+                        transition: .3s;
+                        text-transform: uppercase;
+                        &:hover{
+                            background: #008080;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.CARDS .CARDS_CONTAINER .filters > span{
+    display: none;
+}
+.herald_logo{
+  
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    width: 80px;
+    object-fit: cover;
+
+}
+@media(max-width:800px){
+    .CARDS .CARDS_CONTAINER{ 
+        .filters {
+        &>span{
+            text-align: center;
+            display: block;
+            margin: auto;
+            line-height: 40px;
+            border: 1px solid #008080;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            i{
+                margin-left: 5px;
+              
+                transition: .3s;
+            }
+
+        }
+        
+        ul{
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+        li{
+            line-height: 40px;
+            border-bottom:  1px solid #008080; 
+            &.active{
+                border-radius: 0;
+            }
+        }
+    }
+  &.active{
+      ul{
+      height: 285px;
+  }}
+}
+
+.CARD{
+    width: 100%;
+}
+}
+
+}
+
